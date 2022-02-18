@@ -3,7 +3,7 @@ const Recipe = require('./model');
 
 const router = express.Router();
 
-router.get('/id', (req, res, next) => {
+router.get('/:id', (req, res, next) => {
     const { id } = req.params;
 
     Recipe.getRecipeById(id)
